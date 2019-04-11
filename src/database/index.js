@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost/placemetricsAPI", {
-  useMongoClient: true
+  useNewUrlParser: true
 });
 mongoose.Promise = global.Promise;
 
