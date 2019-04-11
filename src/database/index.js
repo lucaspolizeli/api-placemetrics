@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/placemetricsAPI", {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true
 });
 mongoose.Promise = global.Promise;
