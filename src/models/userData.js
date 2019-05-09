@@ -10,8 +10,7 @@ const UserDataSchema = new mongoose.Schema({
     required: true
   },
   userIp: {
-    type: String,
-    required: true
+    type: String
   },
   createdAt: {
     type: Date,
