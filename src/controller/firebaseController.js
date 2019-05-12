@@ -7,7 +7,7 @@ firebase.initializeApp({
 
 const reference = firebase.database().ref("weather_data");
 reference.on("value", dataFromNodeMCU => {
-  console.log("user from node mcu: ", dataFromNodeMCU.val());
+  console.log("Data from NODE MCU: ", dataFromNodeMCU.val());
   if (dataFromNodeMCU.val() !== null) {
     UserData.create(dataFromNodeMCU.val());
   }
