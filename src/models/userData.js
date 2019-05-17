@@ -1,5 +1,6 @@
 const mongoose = require("../database");
-const moment = require("moment");
+const moment = require("moment-timezone");
+var sp = moment.tz("2014-06-01 12:00", "America/Sao_Paulo");
 
 const UserDataSchema = new mongoose.Schema({
   temperature: {
@@ -15,7 +16,7 @@ const UserDataSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: moment().format()
+    default: sp.format()
   }
 });
 
