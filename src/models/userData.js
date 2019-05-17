@@ -1,4 +1,5 @@
 const mongoose = require("../database");
+const moment = require("moment");
 
 const UserDataSchema = new mongoose.Schema({
   temperature: {
@@ -14,7 +15,7 @@ const UserDataSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: moment().format()
   }
 });
 
