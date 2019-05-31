@@ -4,6 +4,7 @@ const moment = require("moment-timezone");
 
 function toTimeZone(time, zone) {
   // var format = 'YYYY/MM/DD HH:mm:ss ZZ';
+  console.log("-> ", moment(time).tz(zone));
   return moment(time).tz(zone);
 }
 
