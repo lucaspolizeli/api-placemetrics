@@ -3,10 +3,7 @@ const moment = require("moment-timezone");
 const sp = moment.tz("2014-06-01 12:00", "America/Sao_Paulo");
 
 function toTimeZone(time, zone) {
-  var format = "YYYY/MM/DDTHH:mm:ss ZZ";
-  return moment(time, format)
-    .tz(zone)
-    .format(format);
+  return moment(time).tz(zone);
 }
 
 const UserDataSchema = new mongoose.Schema({
@@ -23,7 +20,7 @@ const UserDataSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: toTimeZone(Date.now, "America/Sao_Paulo")
+    default: toTimeZone(Date.now(), "America/Sao_Paulo")
   }
 });
 
