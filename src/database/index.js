@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(process.env.MONGO_URL, { useNewUrlParser: true })
+  .connect(
+    "mongodb+srv://placemetrics:@place123@placemetrics-ulumj.mongodb.net/test?retryWrites=true",
+    { useNewUrlParser: true }
+  )
   .catch(error => {
     console.log(error);
   });
