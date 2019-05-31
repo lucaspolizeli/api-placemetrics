@@ -3,6 +3,7 @@ const moment = require("moment-timezone");
 const sp = moment.tz("2014-06-01 12:00", "America/Sao_Paulo");
 
 function toTimeZone(time, zone) {
+  console.log("time:", moment(time).tz(zone));
   return moment(time).tz(zone);
 }
 
