@@ -15,7 +15,7 @@
     "express": "^4.16.4",
     "firebase": "^6.0.1",
     "moment-timezone": "^0.5.25",
-    "mongoose": "^5.5.0",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.18.11"
   }
 }
